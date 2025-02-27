@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Tutorial</title>
+</head>
+
+<body>
+    <div class="container">
+        This is my container.
+    </div>
+    <script>
+        let Obj1 = {
+            name: "Ayush",
+            channel: "jpg",
+            friend: "Gourav",
+            food: "Momos"
+        }
+        console.log(Obj1);
+
+        // converting js object into JSON string (by using stringify function)
+        let myJsonStr = JSON.stringify(Obj1);
+        console.log(myJsonStr);
+
+        myJsonStr = myJsonStr.replace('Ayush', 'Parnika');
+        console.log(myJsonStr);
+
+        // replacing JSON string into js object (by using parse function)
+        newJsonObj = JSON.parse(myJsonStr);
+        console.log(newJsonObj);
+    </script>
+</body>
+
+</html>

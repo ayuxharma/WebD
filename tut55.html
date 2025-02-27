@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+    <div class="container">
+        This is about loops
+    </div>
+    <script>
+        console.log("This is a loops tutorial");
+        let i = 0;
+        for (i = 0; i < 3; i++) {
+            console.log(i);
+        }
+
+        let friends = ["Ayush", "Gourav", "Mohit"];
+        for (let j = 0; j < friends.length; j++) {
+            console.log("Hello " + friends[j] + ", chai peene jaana h ?");
+        }
+
+        // shortcut for above code (for each loop)
+        friends.forEach(function f(element) {
+            console.log("HELLO " + element);
+        })
+
+        // for of loop
+        for (element of friends) {
+            console.log("HELLO " + element + " BHAI");
+        }
+
+        let student = {
+            name: "Ayush",
+            enroll: 79,
+            section: "A"
+        }
+        // use this loop to iterate over objects in js
+        for (key in student) {
+            console.log(`The ${key} of student is ${student[key]}`);
+        }
+
+
+        // while loop in js
+        let x = 0;
+        while (x < 4) {
+            console.log(`${i} is less than 4`);
+            x++;
+        }
+
+        // do while loop in js  ( ek baar hamesha run hota h)
+        let b = 8;
+        do {
+            console.log("This is a do while loop");
+        } while (b < 3);
+
+    </script>
+</body>
+
+</html>

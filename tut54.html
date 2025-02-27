@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction using Alert , Prompt and Confirm</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a page
+    </div>
+
+    <script>
+        // ALERT in in-browser javascript. It does not return anything
+        alert("This is a alert message from ayush");
+
+        let name = prompt("What is your name?", "Guest");
+
+        // returns bool (true or false)
+        let x = confirm("Do you really want to delete your instagram account?");
+        if (x) {
+            // code to delete the account
+            console.log("Your account has been deleted");
+        }
+        else {
+            // code to cancel deletion of the account
+            console.log("Your account has not been deleted");
+        }
+    </script>
+</body>
+
+</html>

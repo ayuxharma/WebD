@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Box and Text Shadow</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .card {
+            padding: 23px 12px;
+            margin: 23px 12px;
+            background-color: rgb(168, 121, 168);
+
+
+            box-shadow: 10px 13px green;
+            /* pehle x offset then y offset then colour */
+
+            box-shadow: 10px 13px 20px red;
+            /* here the third one i.e 20px is the blur radius , add this , box looks sexy */
+
+            box-shadow: 10px 13px 20px 22px hotpink;
+            /* here the 4th one now (22px) is the spread radius */
+
+            box-shadow: inset 13px 12px yellow;
+            /* this will give shadow inside the box */
+
+            box-shadow: 3px 4px peru , 5px 6px grey;
+            /* this syntax is to give more than 1 shadows , just add one comma between them */
+        }
+
+        .card h2 {
+            text-shadow: 3px 5px red;
+        }
+        /* all these text and box shadows can also have negative values , the shadow will upwards in case of negative values */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>Card1</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae placeat quo assumenda laudantium laboriosam. Ad, repudiandae dolor cupiditate adipisci a dicta quas alias, sequi, eveniet aliquam tempore odit sunt praesentium numquam eligendi deserunt amet?</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>Card2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, modi minus impedit assumenda voluptatem nemo corporis reprehenderit ab laborum exercitationem obcaecati possimus molestias tempora accusamus consequatur. Natus molestias sed quasi nesciunt sapiente fuga quaerat?</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas expedita earum voluptas nisi ex inventore. Hic vero repellat veritatis assumenda doloribus, similique blanditiis sapiente aspernatur quam obcaecati quae, eius tempore magnam eum a numquam.</p>
+        </div>
+    </div>
+</body>
+
+</html>

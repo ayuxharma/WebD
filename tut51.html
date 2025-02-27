@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope and Conditionals in Javascript</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+
+    <script>
+        // var has global scope
+        var string1 = "This is a string";
+        var string1 = "This is a string2";
+        console.log(string1);
+
+        // let has block level scope
+        let a = "ayush";
+        {
+            let a = "sharma";
+            console.log(a);
+        }
+        console.log(a);
+        // do not use var , use let 
+
+        // const can never be changed , ek baar likh diya so likh diya
+        const x = "This can not be changed";
+        console.log(x);
+
+
+        // CONDITIONALS
+        let age = 2;
+        if (age > 18) {
+            console.log("You can drink");
+        }
+        else if (age == 2) {
+            console.log("Bhai do saal ka h");
+        }
+        else {
+            console.log("You can drink cold drink");
+        }
+
+
+        // SWITCH CASE 
+        const cups = 42;
+        switch (cups) {
+            case 4:
+                console.log("The value of cups is 4");
+                break;
+
+            case 41:
+                console.log("The value of cups is 41");
+                break;
+
+            case 42:
+                console.log("The value of cups is 42");
+                break;
+
+            case 43:
+                console.log("The value of cups is 43");
+                break;
+
+            default:
+                console.log("The value of cups is none of 4 ,41 ,42 ,43");
+                break;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid + Media Queries</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: red;
+            }
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    ' section section section section '
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:500px) {
+            body {
+                background-color: navy;
+            }
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    ' section section section section '
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+            aside {
+                display: none;
+            }
+            span{
+            display: block;
+            text-align: center;
+        }
+        }
+
+        @media (min-width:500px) and (max-width:800px) {
+            body {
+                background-color: pink;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    ' section section section section '
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+        span{
+            display: block;
+            text-align: center;
+        }
+        }
+
+        @media (min-width:800px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        .bdr {
+            border: 2px solid black;
+            padding: 10px 23px;
+            background-color: wheat;
+        }
+
+        nav {
+            grid-area: navbar;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span> 
+            <span>About</span>
+            <span>Services</span>
+        </nav>
+        <section class="bdr">
+            <h2>Learn CSS in Hindi</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestias odio quis est, accusantium voluptatibus nesciunt nemo corrupti eligendi ducimus necessitatibus temporibus! Dignissimos impedit porro reiciendis nam accusamus maiores vero corporis aliquid! Minima incidunt repellat, eaque itaque nisi quibusdam, eveniet sunt, autem iure aliquid alias magni culpa provident ea! Dolores tempore corrupti fugit eaque, iste praesentium consequatur, magni similique, ullam ipsam vitae sit in commodi quasi eveniet amet consectetur? Ipsam iusto odit atque cum! Tenetur debitis asperiores placeat laudantium vel! Quidem similique, qui facilis, doloremque amet tempore dolore praesentium hic quisquam quaerat corporis expedita eius perferendis! Earum at expedita minus?</p>
+        </section>
+        <aside class="bdr">
+            <h1>More About Us</h1>
+        </aside>
+    </div>
+    <footer class="bdr">Copyright Ayush2004</footer>
+</body>
+
+</html>

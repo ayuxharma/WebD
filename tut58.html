@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS SetTimeOut and ClearTimeOut</title>
+</head>
+
+<body>
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+</body>
+<script>
+    console.log("This is a tutorial 58");
+    // setTimeout -> allows us to run a function once after the interval of time
+    // clearTimeout -> allows us to run a function repeadetly after the interval of time
+
+    function greet(name,text){
+        console.log("Hello , Good Morning " + name + " " + text);
+    }
+
+    // sirf function ka naam likha h , usko call nhi kiya h greet() ayyse call ho jaata h
+    setTimeout(greet,5000,"Ayush" , "Take Care");
+    // 5000 means 5 sec k baad greet function aa jaega
+
+    // baar baar run hota rhega
+    setInterval(greet,1000,"Oye","Sojao");
+
+    // this is how we can add time in our website
+    function displayTime(){
+        time = new Date ;
+        console.log(time);
+        document.getElementById('time').innerHTML = time ;
+    }
+    setInterval(displayTime,1000);
+</script>
+
+</html> 

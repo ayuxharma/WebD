@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+    <!-- DOM stands for Document Object Model -->
+</head>
+
+<body>
+</body>
+<div id="main" class="container">
+    <ul id="nav">
+        <li>Home</li>
+        <li>Airport</li>
+        <li>Contact Us</li>
+        <li>Services</li>
+        <li>More About Us</li>
+    </ul>
+</div>
+<div class="container">
+    This is also a container
+</div>
+
+<script>
+    let x = document.getElementById('main');
+    console.log(x);
+
+    let y = document.getElementById('nav');
+    console.log(y); 
+
+    // container class vale saare dega
+    let z = document.getElementsByClassName('container');
+    console.log(z);
+
+    // jo pehla container class vala element hoga voh dega
+    let a = document.querySelector('.container');
+    console.log("Selector returns",a);
+
+    let b = document.querySelector('#nav');
+    console.log("Selector returns",b);
+
+    // pehla li dega
+    let c = document.querySelector('#nav>li');
+    console.log(c);
+
+    // saare li dega 
+    let d = document.querySelectorAll('#nav>li');
+    console.log(d);
+</script>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dates</title>
+</head>
+<style>
+    .watch {
+        font-size: large;
+        background-color: rgb(208, 160, 223);
+        padding: 10px;
+        border: 2px solid purple;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        This is a container
+    </div>
+    <div class="watch">
+        <h6>
+            Current Time is <span id="time"></span>
+        </h6>
+    </div>
+    <script>
+        console.log("This is date and time tutorial");
+        let dt = new Date();
+        console.log(dt);
+
+        let newDate = new Date("2029-09-30");
+        console.log(newDate);
+
+        // let newDate = new Date(year,month,date,hours,minutes,seconds);
+        let x = new Date(2023, 11, 4, 14, 30, 0);
+        console.log(x);
+
+        let de = x.getDate();
+        console.log(de);
+
+        let month = x.getMonth();
+        console.log(month);
+
+        let hours = x.getHours();
+        console.log(hours);
+
+        let day = x.getDay();
+        console.log(day);
+
+        x.setDate(12);
+        console.log(x);
+
+
+        // clock
+        setInterval(update, 1000);
+        function update() {
+            time.innerHTML = new Date();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object in JS</title>
+</head>
+
+<body>
+    <div class="container">
+        This is math object container.
+    </div>
+    <script>
+
+        // Printing the math object
+        let m = Math;
+        console.log(m);
+
+        // E: 2.718281828459045
+        // LN2: 0.6931471805599453
+        // LN1: 2.302585092994046
+        // LOG2E: 1.4426950408889634
+        // LOG10E: 0.4342944819032518
+        // PI: 3.141592653589793
+        // SQRT1_2 : 0.7071067811865476
+        // SQRT2: 1.4142135623730951
+
+
+        // Printing the constants from Math Object
+        console.log("The value of Math.E is ", Math.E);
+        console.log("The value of Math.PI is ", Math.PI);
+        console.log("The value of Math.LN2 is ", Math.LN2);
+        console.log("The value of Math.SQRT1_2 is ", Math.SQRT1_2);
+
+        // Printing the functions from Math Object
+        let a = 34.64534;
+        let b = 89;
+        console.log("The value of a and b is ", a, b);
+        console.log("The value of a and b rounded is ", Math.round(a), Math.round(b));
+        console.log("3 raised to the power 4 is", Math.pow(3, 4));
+        console.log("Square root of 37 is " , Math.sqrt(37));
+
+        // ceil and floor
+        console.log("5.8 rounded up to nearest integer is " , Math.ceil(5.8));
+        console.log("5.8 rounded down to nearest integer is " , Math.floor(5.8));
+
+        // abs function (absolute value)
+        console.log("Absolute value of 5.66 is " , Math.abs(5.66));
+        console.log("Absolute value of -5.66 is " , Math.abs(-5.66));
+
+        // Trigonometric Function (value is in radian)
+        console.log("The value of sin(pi) is " , Math.sin(Math.PI));
+
+        console.log("The value of sin(pi)/2 is " , Math.sin(Math.PI/2));
+
+        console.log("The value of cos(pi) is " , Math.cos(Math.PI));
+
+        // Max and Min functions
+        console.log("Minimum value of 4,5,6 is " , Math.min(4,5,6));
+        console.log("Maximum value of 4,5,6 is " , Math.max(4,5,6));
+
+        // Generate a random number
+        let r = Math.random();
+        console.log("The random number is " , r) ;
+
+        // random number between a and b is (a,b) = a + (b-a)*Math.random()
+        let x = 1 ;
+        let y = 100 ;
+        let r1 = a + (b-a)*Math.random();
+        console.log("The random number between 1 and 100 is " , r1) ;
+
+        let p = 50 ;
+        let q = 60 ;
+        let r2 = p + (q-p)*Math.random();
+        console.log("The random number between 50 and 60 is " , r2) ;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects in Javascript</title>
+</head>
+
+<body>
+    <div class="container">Ayush Sharma</div>
+    <script>
+        // primitives
+        let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        // objects
+        let employee = {
+            name: "Ayush",
+            salary: 1000,
+            insta1: "ayushh.jpg",
+            insta2: "acat.alepsic",
+        }
+        console.log(employee);
+        console.log(employee.insta1);
+        console.log(employee[insta1]);
+
+        // array is a special type of object
+        let names = [19, 2, 4, "ayush", undefined];
+        console.log(names);
+        console.log(names[3]); // means index 3 vala element print kro
+
+        // alternate way of making an array
+        // new keyword is just in JS to define an object
+        let names2 = new Array(1, 2, 3, "ayush", undefined);
+        console.log(names2);
+        console.log(names[4]);
+
+        console.log(names.length);
+
+        // sort an array
+        names = names.sort();
+        console.log(names);
+
+        // last mai push hoga array k 
+        names.push("jpg");
+        console.log(names);
+
+    </script>
+</body>
+
+</html>
