@@ -1,30 +1,21 @@
-console.log(`Loops`) ;
+console.log(`This is a strings tutorial`) ;
 
-let obj = {
-    name: "Ayush" ,
-    role: "SDE" , 
-    company: "Samsung"
-}
+let a = "Ayush" ;
 
+console.log(a[2]) ; // u
+console.log(a.length) ; // 5
 
-// for in loop
-for (const key in obj) {
-        const element = obj[key];
-        console.log(element) ;
-}
+// template literals
+let name = "billu boy" ;
+console.log(`My name is ${name}`) ;
 
-for (const key in obj) {
-    console.log(key) ;
-}
+let b = "sharma" ;
+console.log(b.toUpperCase()) ;
+console.log(b.toLowerCase()) ;
+console.log(b.length) ;
 
-// for of loop
-for (const x of "ayush") {
-    console.log(x) ;
-}
+// slice a string
+console.log(b.slice(1,5)) ;
 
-// while loop
-let i = 6 ;
-while (i<9) {
-    console.log(i) ;
-    i++ ;
-}
+console.log(b.replace("ma" , "77")) ;
+console.log(b.concat(a)) ;
