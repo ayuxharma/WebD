@@ -1,35 +1,13 @@
-console.log('This is javascript ka second lecture') ;
+console.log(`Hello Ayush`)
 
-var a = 5 ;
-var b = 6 ;
-var c = "Ayush" ;
+document.body ;
+document.body.childNodes ;
+document.body.childNodes[2] ;
+document.body.childNodes[1].childNodes ;
 
-console.log(a+b+8) ;
+document.body.firstElementChild ;
+document.body.firstElementChild.children ;
 
-console.log(typeof a) ;
-console.log(typeof c) ;
-
-// we should let  
-
-// object is a user defined data type
-
-let x = "Ayush bhai" ;
-let y = 22 ;
-let z = 3.55 ;
-const p = true ;
-let q = undefined ;
-let r = null ; // type of null is object (why ?)
-
-console.log(x, y, z, p, q, r) ;
-console.log(typeof x, typeof y, typeof z, typeof p, typeof q, typeof r) ;
-
-let o = {
-    name : "Ayush" ,
-    "job role" : "SDE" ,
-    age : 19 
-}
-console.log(o) ;
-
-o.salary = "15 lpa" ;
-
-console.log(o) 
+document.body.firstElementChild.children[2].nextElementSibling ;
+document.body.firstElementChild.children[2].previousElementSibling ;
+document.body.firstElementChild.children[2].parentElement ;
