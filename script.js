@@ -1,13 +1,10 @@
-console.log(`Hello Ayush`)
+console.log(`Hii Ayush`) ;
 
-document.body ;
-document.body.childNodes ;
-document.body.childNodes[2] ;
-document.body.childNodes[1].childNodes ;
+let boxes = document.getElementsByClassName("box") ;
+console.log(boxes) ;
 
-document.body.firstElementChild ;
-document.body.firstElementChild.children ;
+// boxes[2].style.backgroundColor = "yellow" ;
 
-document.body.firstElementChild.children[2].nextElementSibling ;
-document.body.firstElementChild.children[2].previousElementSibling ;
-document.body.firstElementChild.children[2].parentElement ;
+// document.getElementById("colorBox").style.backgroundColor = "pink" ;
+
+document.querySelector(".box").style.backgroundColor = "green" ;
