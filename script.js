@@ -1,20 +1,23 @@
-let a = document.querySelector(".box").innerHTML ;
-console.log(a) ;
+console.log(`Events`) ;
 
-let b = document.querySelector(".container").innerHTML ;
-console.log(b) ;
+let button = document.getElementById("btn") ;
 
-let c = document.querySelector(".container").innerText ;
-console.log(c) ;
+button.addEventListener("click" , ()=>{
+    //alert("I was clicked") ;
+    document.querySelector(".box").innerHTML = "Clicked" ;
+})
 
-let d = document.querySelector(".container").outerHTML ;
-console.log(d) ;
+// there are lot of mouse events , see mdn reference
 
-let e = document.querySelector(".container").tagName;
-console.log(e) ;
+button.addEventListener("dblclick" , ()=>{
+    //alert("I was clicked") ;
+    document.querySelector(".box").innerHTML = "Double Clicked" ;
+})
 
-let f = document.querySelector(".container").nodeName ;
-console.log(f) ;
+button.addEventListener("contextmenu" , ()=>{
+    alert(`aapne right click kr diya bhaijaan`) ;
+})
 
-let g = document.querySelector(".container").textContent ;
-console.log(g) ;
+document.addEventListener("keydown" , (e)=>{
+    console.log(e) ;
+})
