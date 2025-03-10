@@ -1,23 +1,23 @@
-console.log(`Events`) ;
+// JS has an asynchronous nature
 
-let button = document.getElementById("btn") ;
+console.log(`Hii Ayush`) ;
 
-button.addEventListener("click" , ()=>{
-    //alert("I was clicked") ;
-    document.querySelector(".box").innerHTML = "Clicked" ;
-})
+setTimeout(() => {
+    console.log("I am inside set timeout function") ;
+}, 1000);
 
-// there are lot of mouse events , see mdn reference
+const callback = (arg) => {
+  console.log(arg) ;
+}
 
-button.addEventListener("dblclick" , ()=>{
-    //alert("I was clicked") ;
-    document.querySelector(".box").innerHTML = "Double Clicked" ;
-})
+const loadScript = (src, callback) => {
+    let sc = document.createElement("script") ;
+    sc.src = src ;
+    sc.onload = callback("Ayush") ;
 
-button.addEventListener("contextmenu" , ()=>{
-    alert(`aapne right click kr diya bhaijaan`) ;
-})
+    document.head.append(sc) ;
+}
 
-document.addEventListener("keydown" , (e)=>{
-    console.log(e) ;
-})
+loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback) ;
+
+console.log('Hi Ayush 2') ;
