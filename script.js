@@ -1,23 +1,41 @@
-// JS has an asynchronous nature
+// async function getData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(455);
+//         }, 3500);
+//     })
+// }
 
-console.log(`Hii Ayush`) ;
-
-setTimeout(() => {
-    console.log("I am inside set timeout function") ;
-}, 1000);
-
-const callback = (arg) => {
-  console.log(arg) ;
+async function getData () {
+    let x = await fetch('https://jsonplaceholder.typicode.com/todos/1') ;
+    let data = await x.json() ;
+    console.log(data) ;
+    return 6969 ;
 }
 
-const loadScript = (src, callback) => {
-    let sc = document.createElement("script") ;
-    sc.src = src ;
-    sc.onload = callback("Ayush") ;
+async function main() {
 
-    document.head.append(sc) ;
+    console.log("Loading Modules");
+
+    console.log("Do something else");
+
+    console.log("Load Data");
+
+    let data = await getData();
+
+    console.log(data);
+    console.log("Process Data");
+    console.log("Task 2");
 }
 
-loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback) ;
+main() ;
 
-console.log('Hi Ayush 2') ;
+// data.then((v) => {
+
+//     console.log(data);
+
+//     console.log("Process Data");
+
+//     console.log("Task 2")
+// })
+
