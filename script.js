@@ -1,41 +1,34 @@
-// async function getData() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve(455);
-//         }, 3500);
-//     })
-// }
+// ERROR HANDLING
 
-async function getData () {
-    let x = await fetch('https://jsonplaceholder.typicode.com/todos/1') ;
-    let data = await x.json() ;
-    console.log(data) ;
-    return 6969 ;
+let a = prompt("Enter first number");
+
+let b = prompt("Enter second number");
+
+// let sum = a+b ; // append kr dega
+
+if (isNaN(a) || isNaN(b)) {
+    throw SyntaxError("Please enter a valid number");
+}
+let sum = parseInt(a) + parseInt(b); // ab add kr dega
+
+// console.log("The sum is " , sum*x) ; // but x is not defined
+
+
+function main() {
+
+    // try catch se handle krte h error ko
+    try {
+        console.log("The sum is ", sum * x);
+        return true ;
+    } catch (error) {
+        console.log("Error aagya bhaijaan");
+        return false ;
+    }
+
+    // yeh toh chalega dono try aur catch error mai , and this is used in functions , kyunki return k baad ka code nhi chalta h normally, so we use finally // IMPORTANT FOR INTERVIEW
+    finally {
+        console.log("Files are being closed and db connection is being closed");
+    }
 }
 
-async function main() {
-
-    console.log("Loading Modules");
-
-    console.log("Do something else");
-
-    console.log("Load Data");
-
-    let data = await getData();
-
-    console.log(data);
-    console.log("Process Data");
-    console.log("Task 2");
-}
-
-main() ;
-
-// data.then((v) => {
-
-//     console.log(data);
-
-//     console.log("Process Data");
-
-//     console.log("Task 2")
-// })
-
+let c = main() ;
