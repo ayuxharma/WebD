@@ -1,34 +1,61 @@
-// ERROR HANDLING
+// let obj = {
+//     DOB : "14/03/2004" ,
+//     Name : "Ayush Sharma" ,
+//     age : 19
+// }
 
-let a = prompt("Enter first number");
+// console.log(obj) ;
 
-let b = prompt("Enter second number");
-
-// let sum = a+b ; // append kr dega
-
-if (isNaN(a) || isNaN(b)) {
-    throw SyntaxError("Please enter a valid number");
-}
-let sum = parseInt(a) + parseInt(b); // ab add kr dega
-
-// console.log("The sum is " , sum*x) ; // but x is not defined
+// console.log(obj.DOB) ;
+// console.log(obj.Name) ;
+// console.log(obj.age) ;
 
 
-function main() {
+// let animal = {
+//     eats: true ,
+// } ;
 
-    // try catch se handle krte h error ko
-    try {
-        console.log("The sum is ", sum * x);
-        return true ;
-    } catch (error) {
-        console.log("Error aagya bhaijaan");
-        return false ;
+// // what if we want to access eats property in rabbit
+// let rabbit = {
+//     jumps: true 
+// } ;
+
+// rabbit.__proto__ = animal ; // sets rabbit.[[Prototype]] = animal
+// console.log(rabbit.eats) ;
+
+// let a = new Animal("kutti") ;
+// console.log(a) ;
+
+// console.log(a.eats) ;
+// console.log(a.jumps) ;
+
+
+
+class Animal {
+
+    constructor(name){
+        this.name = name ;
+        console.log("Animal ka Object is created") ;
     }
 
-    // yeh toh chalega dono try aur catch error mai , and this is used in functions , kyunki return k baad ka code nhi chalta h normally, so we use finally // IMPORTANT FOR INTERVIEW
-    finally {
-        console.log("Files are being closed and db connection is being closed");
+    eats () {
+        console.log("khaa rha hu") ;
+    }
+    jumps () {
+        console.log("kood rha hu") ;
     }
 }
 
-let c = main() ;
+class Lion extends Animal {
+    constructor(name){
+        super(name) ;
+        console.log("Lion ka object is created") ;
+    }
+
+    eats() {
+        console.log("sher ambal kha rha h") ;
+    }
+}
+
+let y = new Lion("Sher Puttar") ;
+console.log(y) ;
